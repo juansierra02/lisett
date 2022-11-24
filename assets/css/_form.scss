@@ -1,0 +1,45 @@
+/*
+    Formulario de contacto
+*/
+form {
+    width: 600px;
+    height: 550px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: $colorFondoForm;
+    padding-bottom: 10px;
+
+    label {
+        width: 80px;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    input {
+        width: 100%;
+        padding: 3px 13px;
+        border: 1px solid $colorFondoForm;
+        border-radius: 5px;
+        background-color: $colorImputForm;
+        margin: 10px 0;
+        display: inline-block;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    button {
+        width: 90%;
+        padding: 8px 16px;
+        margin: 2rem;
+        background-color: $colorBlanco;
+        border-radius: 5px;
+        color: $colorBordeBtnForm;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

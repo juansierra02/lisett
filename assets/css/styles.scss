@@ -1,0 +1,197 @@
+@import "./variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+@import "./nav";
+@import "./form";
+@import "./section";
+@import "./footer";
+@import "./gallery";
+
+@media screen and (max-width: 800px) {
+    .checkbtn {
+        display: block;
+    }   
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        -webkit-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    li a.active,
+    li a:hover {
+        background: none;
+        color: red;
+        transition: 0.5s;
+    }
+
+    section {
+        /* height: 100%; */
+        height: 100%;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .enlace {
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    section {
+        height: calc(100vh - 80px);
+    }
+
+    section {
+        height: 100%;
+    }
+
+    .footer .grupo-1 {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid: gap 30px;
+        padding: 35px 5px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .footer .grupo-1 .box h2 {
+        color: #fff;
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+
+    .gallery {
+        width: 50%;
+        grid-template-columns: repeat(1, 1fr);
+        grid: gap 25px;
+        padding: 30px 0px;
+    }
+
+    footer {
+        img {
+            display: none;
+        }
+    }
+
+    form {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        margin: auto;
+        background-color: rgb(175, 104, 104);
+        padding-bottom: 10px;
+    }
+
+    .botonEnviar {
+        width: 100%;
+        padding: 8px 16px;
+        margin: 0rem;
+    }
+
+    form input {
+        width: 100%;
+    }
+}
+
+@if $vista == celular {
+    
+@media screen and (max-width: 400px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        -webkit-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    li a.active,
+    li a:hover {
+        background: none;
+        color: red;
+        transition: 0.5s;
+    }
+
+    section {
+        height: 100%;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .gallery {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid: gap 50px;
+        padding: 10px 50px;
+        text-align: center;
+    }
+
+    footer {
+        img {
+            display: none;
+        }
+    }
+
+    form {
+        background-color: rgb(134, 132, 132);
+    }
+
+    .botonEnviar {
+        width: 100%;
+        padding: 8px 16px;
+    }
+}
+}
